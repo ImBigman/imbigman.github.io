@@ -1,0 +1,218 @@
+.photo {
+  /* border-radius: 25%; */
+  border-radius: 25%;
+  width: 50%;
+}
+
+.title-center {
+  text-align: center;
+}
+
+.title-small {
+  font-size: 18px;
+}
+
+.title-middle {
+  font-size: 24px;
+}
+
+.title-large {
+  font-size: 36px;
+}
+
+.content-center {
+  text-align: center;
+}
+
+.flex-items-center {
+  justify-content: center;
+}
+
+.media {
+  display: flex;
+}
+
+.margin-bottom-1x {
+  margin-bottom: 10px;
+}
+
+.margin-bottom-2x {
+  margin-bottom: 20px;
+}
+
+.margin-bottom-3x {
+  margin-bottom: 30px;
+}
+
+.margin-bottom-4x {
+  margin-bottom: 40px;
+}
+
+.margin-bottom-5x {
+  margin-bottom: 50px;
+}
+.margin-right-2x {
+  margin:0 0  1rem 20px;
+  display: inline-block;
+}
+
+.margin-top-1x {
+  margin-top: 10px;
+}
+
+.margin-top-2x {
+  margin-top: 20px;
+}
+
+.padding-left-4x {
+  padding-left: 40px;
+}
+
+.media-left {
+  margin-right: 1rem;
+}
+
+.media-content {
+  font-size: 18px;
+}
+
+.collapsible-icon {
+  position: absolute;
+  top: 15px;
+}
+
+.info-block-content {
+  display: none;
+}
+
+.info-block-content-active {
+  display: block;
+  border-top: 2px solid #000;
+}
+
+.info-block-header {
+  cursor: pointer;
+}
+
+.left-column p {
+  margin-bottom: 0px;
+}
+
+.left-column .title {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+@media (min-width: 550px) {
+  .title-center {
+    text-align: center;
+  }
+}
+
+@media (max-width: 549px) {
+  .collapsible-icon {
+    top: 8px;
+  }
+  .title-large {
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 399px) {
+  .collapsible-icon {
+    top: 4px;
+  }
+  .title-large {
+    font-size: 24px;
+  }
+}
+
+.book-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  perspective: 600px;
+}
+
+@keyframes initAnimation {
+  0% {
+    transform: rotateY(0deg);
+  }
+  100% {
+    transform: rotateY(-30deg);
+  }
+}
+
+.book {
+  width: 250px;
+  height: 375px;
+  position: relative;
+  transform-style: preserve-3d;
+  transform: rotateY(-30deg);
+  transition: 1s ease;
+  animation: 1s ease 0s 1 initAnimation;
+}
+
+.book:hover {
+  transform: rotateY(0deg);
+}
+
+.book > :first-child {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: red;
+  width: 250px;
+  height: 375px;
+  transform: translateZ(25px);
+  background-color: #01060f;
+  border-radius: 0 2px 2px 0;
+  box-shadow: 5px 5px 20px #666;
+}
+
+.book::before {
+  position: absolute;
+  content: ' ';
+  background-color: blue;
+  left: 0;
+  top: 4px;
+  width: 48px;
+  height: 367px;
+  transform: translateX(221px) rotateY(90deg);
+  background: linear-gradient(90deg,
+    #fff 0%,
+    #f9f9f9 5%,
+    #fff 10%,
+    #f9f9f9 15%,
+    #fff 20%,
+    #f9f9f9 25%,
+    #fff 30%,
+    #f9f9f9 35%,
+    #fff 40%,
+    #f9f9f9 45%,
+    #fff 50%,
+    #f9f9f9 55%,
+    #fff 60%,
+    #f9f9f9 65%,
+    #fff 70%,
+    #f9f9f9 75%,
+    #fff 80%,
+    #f9f9f9 85%,
+    #fff 90%,
+    #f9f9f9 95%,
+    #fff 100%
+    );
+}
+
+.book::after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: ' ';
+  width: 250px;
+  height: 375px;
+  transform: translateZ(-25px);
+  background-color: #01060f;
+  border-radius: 0 2px 2px 0;
+  box-shadow: -10px 0 50px 10px #666;
+}
